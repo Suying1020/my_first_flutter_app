@@ -18,7 +18,7 @@ class LoginScreen extends StatelessWidget {
             Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
               Image.asset(Images.login),
               const SizedBox(width: 15),
-              const Text(Strings.login)
+              Text(Strings.login, style: Theme.of(context).textTheme.headline5),
             ]),
             // Spacing
             const SizedBox(
@@ -28,7 +28,7 @@ class LoginScreen extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                const Text(Strings.username),
+                Text(Strings.username, style: Theme.of(context).textTheme.bodyText2),
                 const SizedBox(height: 12),
                 TextFormField(
                   decoration: InputDecoration(
@@ -54,7 +54,7 @@ class LoginScreen extends StatelessWidget {
                           BorderSide(width: 1, color: MyAppColors.error),
                     ),
                     hintText: Strings.enterUsername,
-                    hintStyle: const TextStyle(
+                    hintStyle: Theme.of(context).textTheme.subtitle1!.copyWith(
                       color: MyAppColors.hintText,
                     ),
                   ),
@@ -66,7 +66,7 @@ class LoginScreen extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                const Text(Strings.password),
+                Text(Strings.password, style: Theme.of(context).textTheme.bodyText2),
                 const SizedBox(height: 12),
                 TextFormField(
                   decoration: InputDecoration(
@@ -92,7 +92,7 @@ class LoginScreen extends StatelessWidget {
                           BorderSide(width: 1, color: MyAppColors.error),
                     ),
                     hintText: Strings.enterPassword,
-                    hintStyle: const TextStyle(
+                    hintStyle: Theme.of(context).textTheme.subtitle1!.copyWith(
                       color: MyAppColors.hintText,
                     ),
                   ),
@@ -104,7 +104,7 @@ class LoginScreen extends StatelessWidget {
             // Login Button
             ElevatedButton(
               onPressed: () {},
-              child: const Text(Strings.loginUppercase),
+              child: Text(Strings.loginUppercase, style: Theme.of(context).textTheme.button),
               style: ElevatedButton.styleFrom(
                 primary: MyAppColors.primaryColor,
                 onPrimary: MyAppColors.white,
@@ -116,7 +116,7 @@ class LoginScreen extends StatelessWidget {
             // Sign up Button
             ElevatedButton(
               onPressed: () {},
-              child: const Text(Strings.signUpUppercase),
+              child: Text(Strings.signUpUppercase, style: Theme.of(context).textTheme.button),
               style: ElevatedButton.styleFrom(
                 primary: MyAppColors.primaryColor,
                 onPrimary: MyAppColors.white,
